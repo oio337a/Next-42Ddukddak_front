@@ -46,7 +46,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         console.error(error);
       }
     };
-
     if (url.pathname === '/auth/callback') {
       postData();
       setLoading(true);
