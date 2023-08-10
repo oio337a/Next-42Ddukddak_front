@@ -14,8 +14,13 @@ export default function WholeDdukddak() {
   const [isConfirm, setIsConfirm] = useContext(ModalContext);
   const [target, setTarget] = useState<IResponse | null>(null);
   const [text, setText] = useState<IText>();
+  const [mount, setMount] = useState(false);
 
   // 처음 마운트 되면 roomList 가져오기
+  useEffect(() => {
+    setMount(true);
+  }, []);
+
   useEffect(() => {
     const fetchRoomList = async () => {
       try {
@@ -25,8 +30,11 @@ export default function WholeDdukddak() {
         console.log('roomList get', err);
       }
     };
-    fetchRoomList();
-  }, []);
+    if (mount) {
+      fetchRoomList();
+      setMount(false);
+    }
+  }, [mount]);
 
   // 참가한 방이 있는데 방 이동시 post 요청
   const requestChangeRoom = async () => {

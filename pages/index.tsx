@@ -20,12 +20,12 @@ export default function Home() {
   const [isConfirm, setIsConfirm] = useState<IModal>({ isConfirm: false });
   const route = useRouter();
 
-  useEffect(() => {
-    const value = getCookieValue('intraId');
-    if (!value) {
-      // route.push('/enter');
-    }
-  }, []);
+  // useEffect(() => {
+  //   const value = getCookieValue('intraId');
+  //   if (!value) {
+  //     // route.push('/enter');
+  //   }
+  // }, []);
 
   const appContextValue = useMemo<IDdukddakContext>(() => [info, setInfo], [info, setInfo]);
   const modalContextValue = useMemo<IModalContext>(() => [isConfirm, setIsConfirm], [isConfirm, setIsConfirm]);
