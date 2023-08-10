@@ -52,15 +52,20 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   //   }
   // }, []);
 
+  // return (
+  //   <div>
+  //     <Head>
+  //       <html lang="ko-KR" />
+  //       <title>42 뚝딱</title>
+  //       <meta charSet="utf-8" />
+  //       <meta name="description" content="모두의 뚝딱만들기" />
+  //     </Head>
+  //     {loading ? <Loading /> : <Component pageProps={pageProps} />};
+  //   </div>
+  // );
   return (
     <div>
-      <Head>
-        <html lang="ko-KR" />
-        <title>42 뚝딱</title>
-        <meta charSet="utf-8" />
-        <meta name="description" content="모두의 뚝딱만들기" />
-      </Head>
-      {loading ? <Loading /> : <Component pageProps={pageProps} />};
+      <Component pageProps={pageProps} />
     </div>
   );
 }
