@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic';
-
 import { useEffect, useState, KeyboardEvent, useRef, useCallback } from 'react';
 import useHandleInputMessage from '@/libs/inputMessage';
 import { IChatDetail } from '@/interface/ChatDetail';
@@ -9,8 +7,8 @@ import getCookieValue from '@/libs/getCookieValue';
 import { cls } from '@/libs/utils';
 import { formatTime } from '@/libs/formatTime';
 import useHandleMouseIndex from '@/libs/mouseIndex';
-const Button = dynamic(import('./button'));
-const RightBlockHeader = dynamic(import('./rightBlockHeader'));
+import Button from './button';
+import RightBlockHeader from './rightBlockHeader';
 
 export default function PublicChatting() {
   const { inputMessage, handleInputMessage, handleDeleteInputMessage } = useHandleInputMessage();

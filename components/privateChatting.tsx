@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import dynamic from 'next/dynamic';
-
 import { useContext, useEffect, useRef, useState } from 'react';
 import { CompatClient, Stomp } from '@stomp/stompjs';
 import axios from 'axios';
@@ -15,8 +13,8 @@ import { formatTime } from '@/libs/formatTime';
 import useHandleMouseIndex from '@/libs/mouseIndex';
 import * as modalMessage from '@/const/modalMessage';
 import { Message } from '@/const/message';
-const Modal = dynamic(import('./modal'));
-const Button = dynamic(import('./button'));
+import Modal from './modal';
+import Button from './button';
 
 interface IMypageProps {
   mypage?: boolean;

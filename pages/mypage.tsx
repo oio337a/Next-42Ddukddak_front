@@ -1,10 +1,8 @@
-import dynamic from 'next/dynamic';
-
 import { useState } from 'react';
-const JoinedDdukddak = dynamic(import('@/components/joinedDdukddak'));
-const Layout = dynamic(import('@/components/layout'));
-const PrivateChatting = dynamic(import('@/components/privateChatting'));
-const PublicChatting = dynamic(import('@/components/publicChatting'));
+import JoinedDdukddak from '@/components/joinedDdukddak';
+import Layout from '@/components/layout';
+import PrivateChatting from '@/components/privateChatting';
+import PublicChatting from '@/components/publicChatting';
 
 export default function Mypage() {
   const [showReservation, setShowReservation] = useState<number>(-1);

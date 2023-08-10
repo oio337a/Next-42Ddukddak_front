@@ -1,10 +1,8 @@
-import dynamic from 'next/dynamic';
-
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { cls } from '@/libs/utils';
 import useHandleMouseIndex from '@/libs/mouseIndex';
-const RightBlockHeader = dynamic(import('./rightBlockHeader'));
+import RightBlockHeader from './rightBlockHeader';
 
 interface IRoomList {
   roomId: number;

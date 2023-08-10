@@ -1,12 +1,10 @@
-import dynamic from 'next/dynamic';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import tempPic from '../public/Ddukddak_logo.png';
 import yongmipa from '../public/yongmipa.jpeg';
 import sohyupar from '../public/sohyupar.jpeg';
 import suhwpark from '../public/suhwpark.png';
-const Layout = dynamic(import('@/components/layout'));
+import Layout from '@/components/layout';
 
 export default function Developer() {
   return (

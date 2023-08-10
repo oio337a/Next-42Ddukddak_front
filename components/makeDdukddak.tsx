@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import dynamic from 'next/dynamic';
 
 import useHandleInputMessage from '@/libs/inputMessage';
 import { useContext, useEffect, useState } from 'react';
@@ -7,8 +6,8 @@ import { AppContext, ModalContext } from '@/pages';
 import axios from 'axios';
 import getCookieValue from '@/libs/getCookieValue';
 import * as modalMessage from '@/const/modalMessage';
-const Modal = dynamic(import('./modal'));
-const Button = dynamic(import('./button'));
+import Modal from './modal';
+import Button from './button';
 
 export default function MakeDdukddak() {
   const { inputMessage, handleInputMessage, handleDeleteInputMessage } = useHandleInputMessage();
