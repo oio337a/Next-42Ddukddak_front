@@ -1,0 +1,13 @@
+/* @tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.my-hover {
+  @apply hover:ring-2 hover:ring-purple-500 hover:ring-offset-0 focus:outline-none;
+}
+
+.my-flex-center {
+  @apply flex flex-col justify-center items-center text-center;
+}
