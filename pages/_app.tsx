@@ -36,7 +36,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       const code = url.searchParams.get('code');
       try {
         await axios
-          .post('/api/auth/42login', null, {
+          .post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/42login`, null, {
             params: { code: code },
           })
           .then(() => setLoading(false))
