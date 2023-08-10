@@ -23,7 +23,7 @@ export default function Home() {
   useEffect(() => {
     const value = getCookieValue('intraId');
     if (!value) {
-      // route.push('/enter');
+      route.push('/enter');
     }
   }, []);
 

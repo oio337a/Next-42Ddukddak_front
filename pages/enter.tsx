@@ -6,7 +6,7 @@ import tempPic from '../public/Ddukddak_logo.png';
 const Enter: NextPage = () => {
   const route = useRouter();
   const onClick = () => {
-    route.push('/api/42login');
+    route.push(`${process.env.NEXT_PUBLIC_BASE_URL}/api/42login`);
   };
 
   return (
