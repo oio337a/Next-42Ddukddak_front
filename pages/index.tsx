@@ -27,7 +27,7 @@ export default function Home() {
     if (!value) {
       // route.push('/enter');
     }
-  });
+  }, []);
 
   const appContextValue = useMemo<IDdukddakContext>(() => [info, setInfo], [info, setInfo]);
   const modalContextValue = useMemo<IModalContext>(() => [isConfirm, setIsConfirm], [isConfirm, setIsConfirm]);

@@ -28,7 +28,7 @@ export default function WholeDdukddak() {
       }
     };
     fetchRoomList();
-  });
+  }, []);
 
   // 참가한 방이 있는데 방 이동시 post 요청
   const requestChangeRoom = async () => {

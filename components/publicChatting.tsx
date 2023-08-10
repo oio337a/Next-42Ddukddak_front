@@ -80,7 +80,7 @@ export default function PublicChatting() {
       connectHandler('999');
       setChkLog(true);
     }
-  });
+  }, []);
 
   const onReport = (message: string) => {
     console.log('신고할 메세지 : ', message);

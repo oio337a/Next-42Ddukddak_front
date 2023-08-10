@@ -23,7 +23,7 @@ export default function JoinedDdukddak({ setIndex }: IIndexProps) {
 
   useEffect(() => {
     requestRoomList();
-  });
+  }, []);
 
   const requestRoomList = async () => {
     try {

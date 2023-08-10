@@ -50,7 +50,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       postData();
       setLoading(true);
     }
-  });
+  }, []);
   return (
     <div>
       <Head>
