@@ -19,7 +19,10 @@ export default function MakeDdukddak() {
   const makeRoomPost = async () => {
     try {
       await axios
-        .post('/api/chat/ddukddak', { roomName: inputMessage, login: getCookieValue('intraId') })
+        .post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/chat/ddukddak`, {
+          roomName: inputMessage,
+          login: getCookieValue('intraId'),
+        })
         .then((res) => {
           console.log('makeRoom response', res.data);
           setInfo({
