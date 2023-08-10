@@ -49,7 +49,7 @@
 export default function Home() {
   return (
     <div>
-      <button>gi</button>
+      <button>왜안대지..?</button>
     </div>
   );
 }

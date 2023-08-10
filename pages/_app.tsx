@@ -51,6 +51,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       setLoading(true);
     }
   }, []);
+
   return (
     <div>
       <Head>
