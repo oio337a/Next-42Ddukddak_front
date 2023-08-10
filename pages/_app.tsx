@@ -65,6 +65,12 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   // );
   return (
     <div>
+      <Head>
+        <html lang="ko-KR" />
+        <title>42 뚝딱</title>
+        <meta charSet="utf-8" />
+        <meta name="description" content="모두의 뚝딱만들기" />
+      </Head>
       <Component pageProps={pageProps} />
     </div>
   );
