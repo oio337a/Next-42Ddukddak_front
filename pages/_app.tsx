@@ -29,28 +29,28 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     };
   }, []);
 
-  useEffect(() => {
-    const url = new URL(window.location.href);
+  // useEffect(() => {
+  //   const url = new URL(window.location.href);
 
-    const postData = async () => {
-      const code = url.searchParams.get('code');
-      try {
-        await axios
-          .post('/api/auth/42login', null, {
-            params: { code: code },
-          })
-          .then(() => setLoading(false))
-          .then(() => route.push('/'));
-      } catch (error) {
-        console.error(error);
-      }
-    };
+  //   const postData = async () => {
+  //     const code = url.searchParams.get('code');
+  //     try {
+  //       await axios
+  //         .post('/api/auth/42login', null, {
+  //           params: { code: code },
+  //         })
+  //         .then(() => setLoading(false))
+  //         .then(() => route.push('/'));
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
 
-    if (url.pathname === '/auth/callback') {
-      postData();
-      setLoading(true);
-    }
-  }, []);
+  //   if (url.pathname === '/auth/callback') {
+  //     postData();
+  //     setLoading(true);
+  //   }
+  // }, []);
 
   return (
     <div>
